@@ -1,4 +1,4 @@
-# PHP-EXPERT-NIVEAU3-Taak01
+# PHP-EXPERT-PDO-SELECT-Taak01
 
 ## Medewerkers
 
@@ -12,18 +12,20 @@ De voordelen zitten in
 > * Herbruikbaarheid (verschillende databasetypen te gebruiken)
 
 Om het PDO-object te gebruiken moeten we eerst een connectie maken met de database.
-In de onderstaande code staat een voorbeeld van het maken van zo'n connectie. Er wordt een connectie gemaakt met de `coolblue` database
+In de onderstaande code staat een voorbeeld van het maken van zo'n connectie. Er wordt een connectie gemaakt met de `toolsforever` database
+
+(Als je dat nog niet gedaan hebt kun je nu een database maken met behulp van PHPMyAdmin)
 
 ```php
 $database_lokatie     = 'localhost';
-$database_naam        = 'coolblue';
+$database_naam        = 'toolsforever';
 $database_gebruiker   = 'root';
 $database_wachtwoord  = '';
 
 $database_connectie = new PDO("mysql:host=$database_lokatie;dbname=$database_naam", $database_gebruiker, $database_wachtwoord);
 ```
 
-Als dat allemaal gelukt is (er is een database `coolblue` aangemaakt. Bijvoorbeeld met PHPMyAdmin) dan kunnen we de database gebruiken in PHP
+Als dat allemaal gelukt is (er is een database `toolsforever` aangemaakt. Bijvoorbeeld met PHPMyAdmin) dan kunnen we de database gebruiken in PHP
 met behulp van het object `$database_connectie`
 
 Je kunt op verschillende wijzes een query uitvoeren (gegevens ophalen). Met de methode `PDO::query()` kun je zonder variabelen eenvoudig een query uitvoeren op de database.
@@ -31,8 +33,12 @@ Je kunt op verschillende wijzes een query uitvoeren (gegevens ophalen). Met de m
 De query method geeft een `$statement` object terug waarmee je de gegevens kunt ophalen met de method PDO::fetchAll()
 
 ```php
-$statement = $database_connectie->query('SELECT * FROM medewerkers'); //haal alle gebruikers op uit de database coolblue
-$database_gegevens = $statement->fetchAll();
+
+$sql = "SELECT * FROM users";
+$statement = $database_connectie->prepare($sql); //haal alle gebruikers op uit de database toolsforever
+$statement->execute();
+$database_gegevens = $statement->fetchAll(PDO::FETCH_ASSOC);
+
 foreach($database_gegevens as $gebruiker){  
   echo $gebruiker['naam'] . "<br>";
 }

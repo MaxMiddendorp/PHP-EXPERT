@@ -1,30 +1,33 @@
 # PHP-EXPERT Moduleopdracht
 
-## Voetbalclub ASD `20
+## Superheroes
 
 ## Toelichting
 
-De voetbalclub moet een administratie systeem hebben van wie in welk team speelt maar ook of het lid betaald heeft of niet. Kortom een administratiesysteem voor leden. Daarnaast wil de club ook verschillende totaaloverzichten kunnen maken van de verschillende teams.
+Soms heb je te maken met heel veel data. Soms heb je te maken met hele grote databases. In deze opdracht ga je met een grote dataset werken.
 
 ## Leerdoelen
 
-> 1. [ ] Ik maak een applicatie om de leden administratie van de voetbalclub te kunnen beheren
+> 1. [ ] Ik maak een webapplicatie waarbij superhelden centraal staan.
 
 ## Opdracht
 
-> - Je mag gebruik maken van een CSS framework
->
-> 1. Maak een database: `voetbalclubASD`
-> 2. Maak een database bestand: db.conn.php
-> 3. Maak een pagina om alle leden te kunnen tonen
-> 4. Maak een pagina om leden te kunnen toevoegen
-> 5. Maak een pagina om leden te kunnen verwijderen
-> 6. Maak een pagina om teams te kunnen bekijken
-> 7. Maak een pagina om teams te kunnen verwijderen
+- Je mag gebruik maken van een CSS framework
+
+### Database
+
+1. [ ] Maak een database: `phpexpert`
+2. [ ] Importeer het bestand `superheroes.sql` in je database
+3. [ ] Maak een php bestand: `database.php` en zet hierin code om een database connectie te maken (gebruik PDO)
+4. [ ] Maak een `superheroes_index.php` waarbij de kolommen `Title`, `Àlignment` van tabel `superheroes` __toond__. Stijl de tabel (mag met [Bootstrap](https://getbootstrap.com))
+5. [ ] Maak op de bovengenoemde tabel een link of een knop waarmee naar de pagina gaat om een individuele superhero kunt bekijken in detail
+6. [ ] Maak een pagina `superheroes_show.php` waarme je de gegevens van een individuele superhero kunt __bekijken__
+7. [ ] Maak een pagina `superheros_edit.php` waarmee je de gegevens van een individuele superhero kunt __updaten/wijzigen__.
+8. [ ] Maak een pagina `superheroes_delete.php` waarmee je een individuele superhero kunt __verwijderen__.
 
 ## Eindresultaat
 
-Het eindresultaat is een volledig werkende applicatie die alle functionaliteiten bevat.
+Het eindresultaat is een volledig werkende webapplicatie die de overzichten van `superheros` kan tonen. Daarnaast ook de _profiel_ pagina's van individuele entiteiten. Je kunt de verschilledne entitieiten verwijderen, aanpassen en toevoegen.
 
 ## Bronnen
 

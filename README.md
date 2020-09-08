@@ -10,7 +10,7 @@ In deze module ga je aan de slag met complexere arrays: `multidimensionale array
 ## Leerdoelen
 
 > 1. [ ] Ik kan een multidimensionale array lezen, schrijven en loopen met diverse type loops
-> 1. [ ] Ik kan database gegevens Toevoegen (Create), Ophalen (Select), Aanpassen (Update), Verwijderen (Delete) (C.R.U.D.) met PDO 
+> 1. [ ] Ik kan database gegevens __ophalen__ (Select of SELECT WHERE) met PDO
 
 ## Bronnen
 
